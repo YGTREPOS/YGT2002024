@@ -70,24 +70,68 @@ nav {
 }
 
 .menu ul {
+    align-items: center;
     list-style: none;
     display: flex;
 }
 
 .menu li {
-    margin-left: 20px;
+    /* margin-left: 20px; */
+}
+
+.menu li a {
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-family: fantasy;
+    color: #a43e3e;
+    display: flex;
+    height: 100%;
+    min-height: 60px;
+    padding: 0 5px;
+    transition: all .3s ease-in ;
+}
+
+.menu li a:hover {
+    background-color: gold;
 }
 
 h1{
-    background-color: black;
-    color: red;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: 1px 2px 8px black;
+    margin-bottom: 15px;
 }
+
+.grid-3 {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    grid-template-columns: 31% 31% 31%;
+}
+
+.grid-3 .item{ 
+    height: 350px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: white;
+    padding: 5px 20px;
+    margin-top: 50px;
+}
+
+/* This is the Beginning of Slideshow */
 
 * {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
 }
