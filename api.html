@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API</title>
+    <title>Movies I Like</title>
 </head>
 <body>
-    <header>
-        <nav>
-
-        </nav>
-    </header>
-    <section>
-
-    </section>
-    <footer>
-        
-    </footer>
+    <h1>Hi my name is Jalen and my favorite movie is ?.</h1>
+    <button type="submit" onclick="return loadMovie()">Reveal movie</button>
+    <div>
+        <h3 id="movieTitle">???</h3>
+        <p id="movieDescription">???</p>
+        <img id="moviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg">???</img>
+    </div>
 </body>
+<script>
+    async function loadMovie() {
+        const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=cars%202&api_key=1785381337e0e60f964d9e8112b6d400');
+        console.log(apiResponse);
+        const responseJson = await apiResponse.json();
+        document.getElementById('movieTitle').innerHTML = responseJson.results[0].original_title
+        document.getElementById('movieDescription').innerHTML = responseJson.results[0].overview
+        document.getElementById('moviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
+    }
+</script>
+
 </html>
