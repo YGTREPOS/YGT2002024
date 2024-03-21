@@ -29,6 +29,38 @@
             </nav>
         </header>
         <section>
+            <h1>Guess our team's favorite movies...</h1>
+            <button type="submit" onclick="return loadMovie()">Reveal Jalen's favorite movie</button>
+            <div>
+                <h3 id="movieTitle">???</h3>
+                <p id="movieDescription">???</p>
+                <img id="moviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg">???</img>
+            </div>
+            <button type="submit" onclick="return loadCoreyMovie()">Reveal Corey's favorite movie</button>
+            <div>
+                <h3 id="coreyMovieTitle">???</h3>
+                <p id="coreyMovieDescription">???</p>
+                <img id="coreyMoviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg">???</img>
+            </div>
+            <link rel="stylesheet" type="text/css" href="apistyle.css"/>
+        <script>
+            async function loadMovie() {
+                const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=cars%202&api_key=1785381337e0e60f964d9e8112b6d400');
+                console.log(apiResponse);
+                const responseJson = await apiResponse.json();
+                document.getElementById('movieTitle').innerHTML = responseJson.results[0].original_title
+                document.getElementById('movieDescription').innerHTML = responseJson.results[0].overview
+                document.getElementById('moviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
+            }
+            async function loadCoreyMovie() {
+                const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=ready%20player%201&api_key=1785381337e0e60f964d9e8112b6d400');
+                console.log(apiResponse);
+                const responseJson = await apiResponse.json();
+                document.getElementById('coreyMovieTitle').innerHTML = responseJson.results[0].original_title
+                document.getElementById('coreyMovieDescription').innerHTML = responseJson.results[0].overview
+                document.getElementById('coreyMoviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
+            }
+        </script>
 
         </section>
         <footer>
