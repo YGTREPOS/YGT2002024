@@ -30,22 +30,34 @@
             <div class="row">
                 <h1>Hello, Parents!</h1>
                 <h1>Getting to know The Python Pirates!!</h1>
+                <select class="form-select div-toggle" data-target=".members" aria-label="Default select example">
+                    <option selected>CHOOSE A TEAM MEMBER</option>
+                    <option value="corey" data-show=".corey">Corey</option>
+                    <option value="jalen" data-show=".jalen">Jalen</option>
+                    <option value="tyson" data-show=".tyson">Tyson</option>
+                </select>
             </div>
-            <div class="grid-3">
-                <div class="item">
+            <div class="members">
+                <div class="member corey hide">
                     <h1>Corey Robinson</h1>
-                    <img class="img" src="corey.jpg">
-                    <p style="background-color: white;">Corey Robinson, Sandtown middle, 7th Grade, viedo games, 12, favorite part about YGT working with other, least part about YGT working alone</p>
+                    <div class="img-txt">
+                        <img class="img" src="corey.jpg">
+                        <p style="background-color: white;">Corey Robinson, Sandtown middle, 7th Grade, viedo games, 12, favorite part about YGT working with other, least part about YGT working alone</p>
+                    </div>
                 </div>
-                <div class="item">
+                <div class="member jalen hide">
                     <h1>Jalen Tyler</h1>
-                    <img src="jalen.jpg">
-                    <p style="background-color: white;">My name is Jalen Tyler. I am 12 years old and my birthday is August 18. My favorite color is red, and I enjoy playing video games and sometimes soccer. My favorite video games are Roblox, Minecraft, and Fortnite.</p>
+                    <div class="img-txt">
+                        <img src="jalen.jpg">
+                        <p style="background-color: white;">My name is Jalen Tyler. I am 12 years old and my birthday is August 18. My favorite color is red, and I enjoy playing video games and sometimes soccer. My favorite video games are Roblox, Minecraft, and Fortnite.</p>
+                    </div>
                 </div>
-                <div class="item">
+                <div class="member tyson hide">
                     <h1>Tyson Brown</h1>
-                    <img src="tyson.jpg">
-                    <p style="background-color: white;">My name is Tyson Brown, I am a rising 10th grader and hobbies I have are playing video games and basketball. I have learned many things in YGT and plan to apply it after high school</p>
+                    <div class="img-txt">
+                        <img src="tyson.jpg">
+                        <p style="background-color: white;">My name is Tyson Brown, I am a rising 10th grader and hobbies I have are playing video games and basketball. I have learned many things in YGT and plan to apply it after high school</p>
+                    </div>
                 </div>
             </div>
         </section>

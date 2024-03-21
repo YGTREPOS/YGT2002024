@@ -23,7 +23,8 @@ table {
 	border-spacing: 0;
 }
 
-/* This is the end of CSS RESET */
+/****************** This is the end of CSS RESET **********************/
+
 
 body {
     overflow: auto;
@@ -93,8 +94,8 @@ h1{
 }
 
 .grid-3 .item{ 
-    height: auto;
-    background-color: grey;
+    height: 350px;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -109,7 +110,43 @@ footer {
     margin-top: 50px;
 }
 
-/* This is the Beginning of Slideshow */
+.member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.member h1 {
+    flex: 100%;
+}
+
+.img-txt {
+    display: flex;
+    flex: 0 1 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-txt img {
+    border-radius: 15px 0 0 15px;
+    flex: 0 1 50%;
+    width: 20%;
+}
+
+.img-txt p {
+    align-items: center;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    flex: 0 1 50%;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.hide {
+    display: none;
+}
+
+/**************** This is the Beginning of Slideshow ********************/
 
 * {box-sizing:border-box}
 
@@ -214,7 +251,7 @@ img {
     }
 }
 
-/*---- Beginning of Animated Background -----*/
+/*************** Beginning of Animated Background *****************/
 
 @keyframes gradient {
     0% {
