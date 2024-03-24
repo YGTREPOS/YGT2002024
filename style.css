@@ -39,9 +39,16 @@ body {
     background-image: url(/logo.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     height: 80px;
-    width: 120px;
+    width: 350px;
+}
+
+.logo span {
+    line-height: 80px;
+    font-size: 36px;
+    font-family: fantasy;
+    padding-left: 90px;
 }
 
 nav {
