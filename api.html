@@ -40,20 +40,23 @@
                 </div>
                 <img id="moviePicture" class="card-img-top" src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg">
             </div>
-            <button type="submit" onclick="return loadCoreyMovie()">Reveal Corey's favorite movie</button>
+            <br>
+            <button class="btn btn-success btn-lg" type="submit" onclick="return loadCoreyMovie()">Reveal Corey's favorite movie</button>
             <div>
                 <h3 id="coreyMovieTitle">???</h3>
                 <p id="coreyMovieDescription">???</p>
-                <img id="coreyMoviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg">???</img>
-            </div></div>
-            <button type="submit" onclick="return loadTysonMovie()">Reveal Tyson's favorite movie</button>
+                <img id="coreyMoviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg"></img>
+            </div>
+            <br>
+            <button class="btn btn-success btn-lg" type="submit" onclick="return loadTysonMovie()">Reveal Tyson's favorite movie</button>
             <div>
                 <h3 id="tysonMovieTitle">???</h3>
                 <p id="tysonMovieDescription">???</p>
-                <img id="tysonMoviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg">???</img>
+                <img id="tysonMoviePicture"src="https://miro.medium.com/v2/resize:fit:620/1*kwN_Y8GNf2ZB6sNQxngVyw@2x.jpeg"></img>
             </div>
         <script>
             async function loadMovie() {
+                document.getElementById('moviePicture').src = 'loading.png'
                 const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=spider-man%20across%20the%20spider-verse&api_key=1785381337e0e60f964d9e8112b6d400');
                 console.log(apiResponse);
                 const responseJson = await apiResponse.json();
@@ -62,6 +65,7 @@
                 document.getElementById('moviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
             }
             async function loadCoreyMovie() {
+                document.getElementById('moviePicture').src = 'loading.png'
                 const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=ready%20player%201&api_key=1785381337e0e60f964d9e8112b6d400');
                 console.log(apiResponse);
                 const responseJson = await apiResponse.json();
@@ -69,7 +73,9 @@
                 document.getElementById('coreyMovieDescription').innerHTML = responseJson.results[0].overview
                 document.getElementById('coreyMoviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
             
-            }async function loadTysonMovie() {
+            }
+            async function loadTysonMovie() {
+                document.getElementById('moviePicture').src = 'loading.png'
                 const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=the%20spongebob%20squarepants%20movie&api_key=1785381337e0e60f964d9e8112b6d400');
                 console.log(apiResponse);
                 const responseJson = await apiResponse.json();

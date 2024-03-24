@@ -73,3 +73,16 @@ h2 {
     color: rgb(0, 211, 0);
     background-color: darkblue;
 }
+
+#tysonMoviePicture {
+    width: 500px;
+    height: 500px;
+}
+#tysonMovieTitle {
+    color: blue;
+    font-style: italic;
+}
+#tysonMovieDescription {
+    color: rgb(0, 211, 0);
+    background-color: darkblue;
+}
