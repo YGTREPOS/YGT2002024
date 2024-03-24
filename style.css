@@ -36,8 +36,11 @@ body {
 }
 
 .logo {
-    background-image: url(https://placehold.it/300x220);
-    height: 60px;
+    background-image: url(/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80px;
     width: 120px;
 }
 
@@ -144,6 +147,13 @@ footer {
 
 .hide {
     display: none;
+}
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0900818a;
 }
 
 /**************** This is the Beginning of Slideshow ********************/
