@@ -9,23 +9,39 @@ h1 {
     text-align: center;
     color: antiquewhite;
     padding: 10px;
-  }
-  #moviePicture{
-width: 500px;
-height: 500px;
 }
 
-#movieTitle{
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.card.item {
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.card.item img {
+    width: 100%;
+}
+
+#moviePicture {
+    width: 500px;
+    height: 500px;
+}
+
+#movieTitle {
     background-color: rgb(175, 11, 11);
     font-style: italic;
     color: aliceblue;
 }
-#movieDescription{
-
-color: rgb(0, 66, 69);
-background-color: lightcyan;
+#movieDescription {
+    color: rgb(0, 66, 69);
+    background-color: lightcyan;
 }
+
 h2 {
     color: white;
     font-size: 3rem;
@@ -45,15 +61,15 @@ h2 {
     display: flex;
     
 }
-#coreyMoviePicture{
-width: 500px;
-height: 500px;
+#coreyMoviePicture {
+    width: 500px;
+    height: 500px;
 }
-#coreyMovieTitle{
+#coreyMovieTitle {
     color: blue;
     font-style: italic;
 }
-#coreyMovieDescription{
+#coreyMovieDescription {
     color: rgb(0, 211, 0);
     background-color: darkblue;
 }
