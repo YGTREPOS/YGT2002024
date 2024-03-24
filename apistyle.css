@@ -1,0 +1,75 @@
+body
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+h1 {
+    background-color: #e36060;
+    text-align: center;
+    color: antiquewhite;
+    padding: 10px;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card.item {
+    overflow: hidden;
+    max-width: 500px;
+}
+
+.card.item img {
+    width: 100%;
+}
+
+#moviePicture {
+    width: 500px;
+    height: 500px;
+}
+
+#movieTitle {
+    background-color: rgb(175, 11, 11);
+    font-style: italic;
+    color: aliceblue;
+}
+#movieDescription {
+    color: rgb(0, 66, 69);
+    background-color: lightcyan;
+}
+
+h2 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 4px 3px black;
+}
+
+.banner{
+    background-image: url('https://www.twopeasandtheirpod.com/wp-content/uploads/2022/11/Apple-Cranberry-Pie-43.jpg');
+    height: 500px;
+    width: 100vw;  
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.wrap{
+    display: flex;
+    
+}
+#coreyMoviePicture {
+    width: 500px;
+    height: 500px;
+}
+#coreyMovieTitle {
+    color: blue;
+    font-style: italic;
+}
+#coreyMovieDescription {
+    color: rgb(0, 211, 0);
+    background-color: darkblue;
+}
