@@ -62,7 +62,7 @@
                 document.getElementById('moviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
             }
             async function loadCoreyMovie() {
-                const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=the%20spongebob%20squarepants%20movie&api_key=1785381337e0e60f964d9e8112b6d400');
+                const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=ready%20player%201&api_key=1785381337e0e60f964d9e8112b6d400');
                 console.log(apiResponse);
                 const responseJson = await apiResponse.json();
                 document.getElementById('coreyMovieTitle').innerHTML = responseJson.results[0].original_title
@@ -70,7 +70,7 @@
                 document.getElementById('coreyMoviePicture').src ="https://image.tmdb.org/t/p/original"+ responseJson.results[0].poster_path
             
             }async function loadTysonMovie() {
-                const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=ready%20player%201&api_key=1785381337e0e60f964d9e8112b6d400');
+                const apiResponse = await fetch('https://api.themoviedb.org/3/search/movie?query=the%20spongebob%20squarepants%20movie&api_key=1785381337e0e60f964d9e8112b6d400');
                 console.log(apiResponse);
                 const responseJson = await apiResponse.json();
                 document.getElementById('tysonMovieTitle').innerHTML = responseJson.results[0].original_title
